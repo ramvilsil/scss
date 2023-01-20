@@ -19,8 +19,27 @@ body {
 }
 
 /* ------- END of General Styling ------- */
+/* ------- Scrollbar Styling ------- */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4FFFD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F9DC5C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ED254E;
+}
+
+/* ------- END of Scrollbar Styling ------- */
 /* ------- Top Navbar Styling ------- */
 .navbar {
+  transition: height 300ms;
   z-index: 100;
   position: fixed;
   top: 0;
@@ -30,21 +49,39 @@ body {
   background-color: #465362;
   color: #F4FFFD;
   align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
+  justify-content: space-between;
 }
 
-.navbar a {
+.navbar > * {
+  margin: 2rem;
+}
+
+.navlinks a {
   text-decoration: none;
   color: #F4FFFD;
   padding: 0.75rem;
 }
 
-.navbar a:hover {
+.navlinks a:hover {
   cursor: pointer;
   border-radius: 1rem;
   background-color: #011936;
   opacity: 0.6;
+}
+
+.navlinks {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+  width: 3em;
+}
+
+#logo:hover {
+  cursor: pointer;
 }
 
 /* ------- END of Top Navbar Styling ------- */
@@ -111,4 +148,75 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ------- END of Footer Styling ------- *//*# sourceMappingURL=style.css.map */
+/* ------- END of Footer Styling ------- */
+/* ------- Styling for smartphones ------- */
+.navbar-open {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  height: 40vh;
+  width: 100%;
+  display: none;
+  background-color: #465362;
+  color: #F4FFFD;
+  justify-content: space-between;
+}
+
+.navbar-open > * {
+  margin: 2em;
+}
+
+.navlinks-mobile {
+  margin-top: 12em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  height: 1em;
+  justify-content: center;
+  align-items: center;
+  gap: 2.25em;
+}
+
+.navlinks-mobile > * {
+  text-align: center;
+  background-color: #ED254E;
+  border-radius: 2rem;
+  padding: 0.25em;
+}
+
+.navlinks-mobile > *:hover {
+  text-decoration: underline;
+}
+
+.navlinks-mobile a {
+  color: white;
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+.nav-icon-show {
+  display: none;
+}
+
+.nav-icon-hide {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .navlinks {
+    display: none;
+  }
+  .navbar-open {
+    display: flex;
+  }
+  .nav-icon-show {
+    display: block;
+  }
+}
+@media screen and (max-height: 700px) {
+  .navbar-open {
+    height: 60vh;
+  }
+}
+/* ------- END Styling for smartphones ------- *//*# sourceMappingURL=style.css.map */

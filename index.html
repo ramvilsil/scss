@@ -53,12 +53,25 @@
     <main>
 
         <!-- Home -->
-        <section id="home">Hello, Welcome</section>
+        <section id="home">
+
+            <div class="section-header">Hello, Welcome</div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac justo nec libero blandit interdum ac nec
+                felis. Praesent vel laoreet ante. Nunc eget nibh vel sem dapibus fermentum at nec quam. Nam maximus ante
+                sapien, vel bibendum justo pellentesque id. Vivamus efficitur lacus sit amet purus imperdiet, a aliquet
+                libero lacinia. Fusce ut ipsum pretium, auctor orci id, tempus velit. Nullam non tristique velit. Aenean
+                ornare enim nunc, non feugiat nunc tristique vulputate. Curabitur placerat lectus in mi sollicitudin
+                posuere. Donec tristique aliquet nisl, at commodo nulla elementum consectetur.
+
+            </p>
+
+        </section>
 
         <!-- About -->
         <section id="about" class="grid-container">
 
-            <h1>Content Area 1 - Header</h1>
+            <div class="section-header">About</div>
             <div>Content Area 2</div>
             <div>Content Area 3</div>
             <div>Content Area 4</div>
@@ -66,7 +79,89 @@
         </section>
 
         <!-- Pricing -->
-        <section id="pricing">Pricing</section>
+        <section id="pricing">
+
+            <div class="section-header">Pricing</div>
+
+            <div id="pricing-description">How often do you want to pay?
+            </div>
+
+            <!-- Selection Button | Button provides multiple selection choices but only 1 may be selected -->
+            <div class="selection-button">
+
+                <!-- Button Selection 1 -->
+                <div
+                    onclick="selectButton(document.getElementsByClassName('selection-button')[0], document.getElementsByClassName('selection-button')[0].children[0])">
+                    Monthly
+                </div>
+
+                <!-- Button Selection 2 -->
+                <div onclick="selectButton(document.getElementsByClassName('selection-button')[0], document.getElementsByClassName('selection-button')[0].children[1])"
+                    class="selected-button">Yearly</div>
+            </div>
+
+            <div class="cards">
+
+                <!-- Card 1 -->
+                <div>
+                    <h1>Single</h1>
+                    <div>for individuals</div>
+
+                    <div>
+                        $ 19.99
+                    </div>
+
+                    <button>Get</button>
+
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div>
+                    <h1>Family Plan</h1>
+                    <div>for families</div>
+
+                    <div>
+                        $ 99.99
+                    </div>
+
+                    <button>Get</button>
+
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div>
+                    <h1>Family Plan</h1>
+                    <div>for families</div>
+
+                    <div>
+                        $ 99.99
+                    </div>
+
+                    <button>Get</button>
+
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 

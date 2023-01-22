@@ -62,3 +62,19 @@ navburger.onclick = () => {
 }
 
 /* ------------------- END of Navbar -------------------  */
+
+/* ------------------- Pricing Section -------------------  */
+
+//Selects a button selection in the multiple selections button
+function selectButton(parentElement, clickedButton) {
+
+    //Removes the 'selected-button' class from every button selection
+    for (child of parentElement.children) {
+        child.classList.remove('selected-button')
+    }
+
+    //Adds the 'selected-button' class to the clicked button
+    clickedButton.classList.add('selected-button')
+}
+
+/* ------------------- END of Pricing Section -------------------  */
